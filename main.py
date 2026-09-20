@@ -29,9 +29,9 @@ async def on_startup(bot: Bot) -> None:
 
 
 async def on_shutdown(bot: Bot) -> None:
-    # Видаляємо вебхук при зупинці бота
-    await bot.delete_webhook()
-    logging.info("🛑 Webhook видалено")
+    # Закоментували видалення, щоб Телеграм пам'ятав адресу, поки сервер спить
+    # await bot.delete_webhook()
+    logging.info("🛑 Сервер зупинено (заснув), але вебхук залишається в Телеграмі")
 
 
 def main():
